@@ -1,4 +1,6 @@
-package Phuc;
+package Phuc.cart;
+
+import Phuc.disc.DigitalVideoDisc;
 
 public class Cart {
 	public static final int MAX_NUMBERS_ORDERED = 20;

@@ -1,16 +1,27 @@
-package Phuc;
+package Phuc.test.store;
 
-public class Aims {
+import Phuc.disc.DigitalVideoDisc;
+import Phuc.store.Store;
+
+public class StoreTest {
+
 	public static void main(String[] args) {
-		Cart anOrder = new Cart();
-		DigitalVideoDisc dvd1 = new DigitalVideoDisc("The Lion King", "Animation", "Roger Allers", 87, 19.95f);
-		anOrder.addDigitalVideoDisc(dvd1);
-		DigitalVideoDisc dvd2 = new DigitalVideoDisc("Star Wars", "Science Fiction", "George Lucas", 87, 24.95f);
-		anOrder.addDigitalVideoDisc(dvd2);
-		DigitalVideoDisc dvd3 = new DigitalVideoDisc("Aladin", "Animation", 18.99f);
-		anOrder.addDigitalVideoDisc(dvd3);
+		// TODO Auto-generated method stub
+		Store s = new Store();
 		
-		System.out.println("Total cost is: ");
-		System.out.println(anOrder.totalCost());
+		DigitalVideoDisc dvd1 = new DigitalVideoDisc("The Lion King", "Animation", "Roger Allers", 87, 19.95f);
+		s.addDVD(dvd1);
+		
+		DigitalVideoDisc dvd2 = new DigitalVideoDisc("Star Wars", "Science Fiction", "George Lucas", 87, 24.95f);
+		s.addDVD(dvd2);
+		
+		DigitalVideoDisc dvd3 = new DigitalVideoDisc("Aladin", "Animation", 18.99f);
+		s.addDVD(dvd3);
+		
+		s.print();
+		
+		s.removeDVD(1);
+		s.print();
 	}
+
 }

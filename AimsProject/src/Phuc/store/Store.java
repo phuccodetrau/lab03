@@ -1,4 +1,6 @@
-package Phuc;
+package Phuc.store;
+
+import Phuc.disc.DigitalVideoDisc;
 
 public class Store {
 

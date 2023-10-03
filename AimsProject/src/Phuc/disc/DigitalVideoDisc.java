@@ -1,4 +1,4 @@
-package Phuc;
+package Phuc.disc;
 
 public class DigitalVideoDisc {
 	private String title;
