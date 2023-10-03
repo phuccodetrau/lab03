@@ -18,4 +18,34 @@ public class Cart {
 		}
 		return total;
 	}
+	
+	public void print() {
+		System.out.println("***********************CART***********************");
+		System.out.println("Ordered Items:");
+		for(int i = 0; i<qtyOrdered; i++) {
+			System.out.println((i+1) + ". " + itemsOrdered[i].toString());
+		}
+		System.out.println("Total cost: " + totalCost());
+		System.out.println("***************************************************");
+	}
+	
+	public DigitalVideoDisc find(String title) {
+		for(int i = 0; i<qtyOrdered; i++) {
+			if(itemsOrdered[i].isMatch(title)) {
+				return itemsOrdered[i];
+			}
+		}
+		System.out.println("No disc match!");
+		return null;
+	}
+	
+	public DigitalVideoDisc find(int id) {
+		for(int i = 0; i<qtyOrdered; i++) {
+			if(itemsOrdered[i].isMatch(id)) {
+				return itemsOrdered[i];
+			}
+		}
+		System.out.println("No disc match!");
+		return null;
+	}
 }

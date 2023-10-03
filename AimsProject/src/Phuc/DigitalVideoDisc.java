@@ -44,7 +44,27 @@ public class DigitalVideoDisc {
 		this.title = title;
 		this.category = category;
 		this.cost = cost;
+		this.director = "";
+		this.length = 90;
 		nbDigitalVideoDics ++;
 		id = nbDigitalVideoDics;
+	}
+	@Override
+	public String toString() {
+		return "DVD - " + this.title + " - " + this.category + " - " + this.director + " - " + this.length + ": " + this.cost + " $";
+	}
+	
+	public boolean isMatch(String title) {
+		if(this.title.equals(title)) {
+			return true;
+		}
+		return false;
+	}
+	
+	public boolean isMatch(int id) {
+		if(this.id == id) {
+			return true;
+		}
+		return false;
 	}
 }
